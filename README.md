@@ -2,6 +2,7 @@
 
 ## Tomoka 1123565
 
+
 ## Question 1
 Given an undirected graph with V nodes and E edges, create and return an adjacency list of the graph. 0-based indexing is followed everywhere.
 
@@ -30,6 +31,7 @@ Node 4 is connected to 0 and 2.
 Node 5 is connected to 0 and 6.
 Node 6 is connected to 3 and 5.
 
+
 ## Question 2
 Given a connected undirected graph represented by an adjacency list adj, which is a vector of vectors where each adj[i] represents the list of vertices connected to vertex i. Perform a Breadth First Traversal (BFS) starting from vertex 0, visiting vertices from left to right according to the adjacency list, and return a list containing the BFS traversal of the graph.
 Note: Do traverse in the same order as they are in the adjacency list.
@@ -51,7 +53,22 @@ Enter the adjacency list (the input is split based on newline characters):
 4
 
 Output:
-[0, 2, 1, 3, 5, 4, 6, 10, 8, 7, 9]
+0 2 1 3 5 4 6 8 7 10 9
+
+Explanation: 
+Starting from 0, the BFS traversal will follow these steps: 
+Visit 0 → Output: 0 
+Visit 2 (the first neighbor of 0) → Output: 0, 2 
+Visit 1 (the second neighbor of 0) → Output: 0, 2, 1
+Visit 3 (the third neighbor of 0) → Output: 0, 2, 1, 3
+Visit 5 (the first neighbor of 2) → Output: 0, 2, 1, 3, 5
+Visit 4 (the second neighbor of 2) → Output: 0, 2, 1, 3, 5, 4
+Visit 6 (the third neighbor of 2) → Output: 0, 2, 1, 3, 5, 4, 6
+Visit 8 (the first neighbor of 3) → Output: 0, 2, 1, 3, 5, 4, 6, 8
+Visit 7 (the second neighbor of 3) → Output: 0, 2, 1, 3, 5, 4, 6, 8, 7
+Visit 10 (the neighbor of 4) → Output: 0, 2, 1, 3, 5, 4, 6, 8, 7, 10
+Visit 9 (the neighbor of 8) → Output: 0, 2, 1, 3, 5, 4, 6, 8, 7, 10, 9
+
 
 ## Question 3
 Given a connected undirected graph represented by an adjacency list adj, which is a vector of vectors where each adj[i] represents the list of vertices connected to vertex i. Perform a Depth First Traversal (DFS) starting from vertex 0, visiting vertices from left to right as per the adjacency list, and return a list containing the DFS traversal of the graph.
@@ -112,4 +129,3 @@ Enter the adjacency list:
 
 Output:
 The sum of the weights of the edges: 20
-
